@@ -17,6 +17,11 @@ export default function Document() {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="favicon.png"
+        />
       </Head>
       <body>
         <Main />
