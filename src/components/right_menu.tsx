@@ -1,13 +1,18 @@
-export default function Right_Menu() {
-    const scrollToSection = (sectionId: string) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
+import { sideMenu } from "@/store/store";
+import { useRecoilValue } from "recoil";
+
+export const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
     }
+}
+
+export default function Right_Menu() {
+    const menuToggle = useRecoilValue(sideMenu);
 
     return (
-        <div className="sm:hidden lg:block fixed top-1/2 right-[6%] -translate-y-1/2 bottom-auto py-6 px-3 text-xl text-gray_left_bar border border-gray_left_bar bg-primary_gray rounded-3xl z-10 bg-transparent">
+        <div className={`sm:hidden lg:${menuToggle ? "hidden" : "block"} fixed top-1/2 right-[6%] -translate-y-1/2 bottom-auto py-6 px-3 text-xl text-gray_left_bar border border-gray_left_bar bg-primary_gray rounded-3xl z-30 bg-transparent`}>
             <div
                 onClick={ev => {
                     ev.preventDefault();

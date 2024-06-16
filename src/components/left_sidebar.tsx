@@ -1,7 +1,10 @@
 export default function Left_Sidebar() {
+
     return (
-        <div className="fixed left-[2%] bg-transparent text-white text-center border border-b-0 border-t-0 border-gray_left_bar rounded-md h-full sm:hidden lg:w-[27%] lg:block ">
-            <button className="fixed left-[1.25%] top-12 bg-primary_gray pt-2 pb-2">
+        <div className="fixed left-[2%] bg-transparent text-white text-center border border-b-0 border-t-0 border-gray_left_bar rounded-md h-full sm:hidden lg:w-[27%] lg:block">
+            <button
+                className="fixed left-[1.25%] top-12 bg-primary_gray pt-2 pb-2"
+            >
                 <i className="las la-cog animate-spin-slow text-xl"></i>
             </button>
             <div className="flex flex-col md:flex-row items-center">

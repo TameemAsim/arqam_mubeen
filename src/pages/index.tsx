@@ -11,6 +11,8 @@ import Skills from "@/components/skills";
 import Portfolio from "@/components/portfolio";
 import Testimonials from "@/components/testimonial";
 import Contact from "@/components/contact";
+import MenuToggle from "@/components/menu_toggle";
+import RightSideMenu from "@/components/right_side_menu";
 
 export default function Home() {
 
@@ -20,6 +22,8 @@ export default function Home() {
         <Left_Sidebar />
         <Contact_Card />
         <Introduction />
+        <MenuToggle />
+        <RightSideMenu />
         <Right_Menu />
         <About />
         <Resume />

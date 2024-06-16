@@ -14,21 +14,24 @@ export default function Contact() {
     const [subject, setSubject] = useState<string>("");
     const [budget, setBudget] = useState<string>("");
     const [message, setMessage] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(false);
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
+        setLoading(true);
 
         const formData = { fullName, email, phoneNumber, subject, budget, message }
 
         try {
             const response = await fetch('/api/send_mail', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
 
             const data = await response.json();
             alert(data.message);
+            setLoading(false);
 
             if (response.status === 200) {
                 setFullName("");
@@ -213,10 +216,15 @@ export default function Contact() {
                         <hr className="border border-gray_left_bar" />
                     </div>
                     <button
-                        type="submit"
-                        className="mt-14 rounded-full px-14 py-3 text-xl text-black border-2 border-primary_green bg-primary_green hover:bg-primary_gray hover:text-primary_green"
+                        type={loading ? "button" : "submit"}
+                        className="mt-14 rounded-full px-14 py-3 text-xl text-black border-2 border-primary_green bg-primary_green hover:bg-primary_gray hover:text-primary_green group"
                     >
-                        SEND MESSAGE
+                        {!loading && "SEND MESSAGE"}
+                        {loading &&
+                            <div
+                                className="w-5 h-5 border-2 border-r-0 border-b-0 border-black group-hover:border-primary_green rounded-full mx-auto my-auto rotate-loading"
+                            >
+                            </div>}
                     </button>
                 </form>
             </motion.div>

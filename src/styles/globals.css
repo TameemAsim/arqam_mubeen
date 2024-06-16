@@ -21,3 +21,7 @@ body, html {
 .rotate {
     animation: spin 5s linear infinite;
 }
+
+.rotate-loading {
+    animation: spin 2s linear infinite;
+}
