@@ -1,4 +1,4 @@
-Mexport default function Left_Sidebar() {
+export default function Left_Sidebar() {
 
     return (
         <div className="fixed left-[2%] bg-transparent text-white text-center border border-b-0 border-t-0 border-gray_left_bar rounded-md h-full sm:hidden lg:w-[27%] lg:block">
