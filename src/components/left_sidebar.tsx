@@ -1,4 +1,4 @@
-export default function Left_Sidebar() {
+Mexport default function Left_Sidebar() {
 
     return (
         <div className="fixed left-[2%] bg-transparent text-white text-center border border-b-0 border-t-0 border-gray_left_bar rounded-md h-full sm:hidden lg:w-[27%] lg:block">
@@ -12,8 +12,8 @@ export default function Left_Sidebar() {
                     <img src="logo.png" alt="logo" className="w-[140px] h-[35px] mt-3 md:ml-5 pr-1 pl-1" />
                 </div>
                 <div className="pl-0 md:pl-7 text-center">
-                    <h1 className="text-sm mt-3">Framer Designer</h1>
-                    <h1 className="text-sm text-end">& Developer</h1>
+                    <h1 className="text-sm mt-3">Team of Marketing</h1>
+                    <h1 className="text-sm text-end">BBA</h1>
                 </div>
             </div>
             <div className="flex justify-center">
